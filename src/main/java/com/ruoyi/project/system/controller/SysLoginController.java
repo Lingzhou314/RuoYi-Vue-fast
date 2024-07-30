@@ -83,4 +83,9 @@ public class SysLoginController
         List<SysMenu> menus = menuService.selectMenuTreeByUserId(userId);
         return AjaxResult.success(menuService.buildMenus(menus));
     }
+
+    @GetMapping("/changeLanguage")
+    public AjaxResult changeLanguage(String lang) {
+        return AjaxResult.success();
+    }
 }
